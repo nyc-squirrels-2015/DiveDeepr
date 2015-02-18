@@ -6,6 +6,7 @@ end
 
 get "/dive_logs/:id/show" do |id|
   @dive_log = DiveLog.find(id)
+  session[:dive_log_id] = @dive_log.id
   erb :'logs/show'
 end
 
@@ -15,6 +16,8 @@ end
 
 post "/dive_logs/new" do
   new_log = DiveLog.create(params[:log])
+
+  session[:dive_log_id] = new_log.id
 
   puts "*"*30
     p new_log
