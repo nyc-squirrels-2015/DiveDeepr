@@ -19,15 +19,7 @@ post "/dive_logs/new" do
 
   session[:dive_log_id] = new_log.id
 
-  puts "*"*30
-    p new_log
-  puts "*"*30
-
   new_log.update(time_in: Time.parse(params[:log][:time_in]), time_out: Time.parse(params[:log][:time_out]))
-
-  puts "*"*30
-    p new_log
-  puts "*"*30
 
   redirect "/dive_logs/all"
 
