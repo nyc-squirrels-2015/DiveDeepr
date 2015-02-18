@@ -11,7 +11,7 @@ post '/login' do
 
   if @user && @user.authenticate(params[:user][:password])
     session[:user_id] = @user.id
-    redirect "/user/#{@user.id}"
+    redirect "/dive_logs/all"
   else
     puts "Login error"
     redirect "/login"
@@ -27,7 +27,7 @@ post '/signup' do
 
   if new_user.save
     session[:user_id] = new_user.id
-    redirect "/user/#{new_user.id}"
+    redirect "/dive_logs/all"
   else
     puts "Signup error"
     redirect '/signup'

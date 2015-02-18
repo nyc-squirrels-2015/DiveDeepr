@@ -1,0 +1,34 @@
+<div id="new_log">
+  <form action="/dive_logs/new" method="POST">
+    <p>Date of dive</p>
+      <input type="text" name="log[date]">
+    <p>Visibility</p>
+      <input type="text" name="log[visibility]">
+    <p>Location of dive</p>
+      <input type="text" name="log[location]">
+    <p>Temperature</p>
+      <input type="text" name="log[temperature]">
+    <p>Exposure Protection</p>
+      <input type="text" name="log[exposure_protection]">
+    <p>Condition</p>
+      <div class="opts"><input type="radio" name="log[condition]" value="Fresh Water"> Fresh Water</div>
+      <div class="opts"><input type="radio" name="log[condition]" value="Salt Water"> Salt Water</div>
+      <div class="opts"><input type="radio" name="log[condition]" value="Shore"> Shore</div>
+      <div class="opts"><input type="radio" name="log[condition]" value="Boat"> Boat</div>
+      <div class="opts"><input type="radio" name="log[condition]" value="Current / Drift"> Current / Drift</div>
+    <p>Starting PSI</p>
+      <input type="text" name="log[start_psi]">
+    <p>Ending PSI</p>
+      <input type="text" name="log[end_psi]">
+    <p>Depth (ft)</p>
+      <input type="text" name="log[depth]">
+    <p>Time In (HH:MM)</p>
+      <input type="time" name="log[time_in]">
+    <p>Time Out (HH:MM)</p>
+      <input type="time" name="log[time_out]">
+    <p>Comments</p>
+      <textarea name="log[comment]"></textarea>
+    <input type="hidden" name="log[user_id]" value="<%= current_user.id %>">
+    <p><input type="submit"></p>
+  </form>
+</div>
