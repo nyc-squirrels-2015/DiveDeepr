@@ -1,0 +1,7 @@
+<div class="all_logs">
+  <ol>
+  <% @dive_logs.each do |dive_log| %>
+    <li><a href="/dive_logs/<%= dive_log.id %>/show"><%= dive_log.date %></a></li>
+  <% end %>
+</ol>
+</div>

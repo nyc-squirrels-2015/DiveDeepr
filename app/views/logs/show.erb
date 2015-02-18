@@ -1,0 +1,16 @@
+<div class="show_log">
+  <p>Date: <%= @dive_log.date %></p>
+  <p>Visibility: <%= @dive_log.visibility %></p>
+  <p>Location: <%= @dive_log.location %></p>
+  <p>Temperature: <%= @dive_log.temperature %></p>
+  <p>Exposure Protection: <%= @dive_log.exposure_protection %></p>
+  <p>Condition: <%= @dive_log.condition %></p>
+  <p>Starting PSI: <%= @dive_log.start_psi %></p>
+  <p>Ending PSI: <%= @dive_log.end_psi %></p>
+  <p>Depth: <%= @dive_log.depth %> ft</p>
+  <p>Time In: <%= @dive_log.time_in %></p>
+  <p>Time Out: <%= @dive_log.time_out %></p>
+  <p>Total Bottom Time: <%= @dive_log.bottom_time %> min</p>
+  <p>Comment:</p>
+    <p><%= @dive_log.comment %></p>
+</div>
