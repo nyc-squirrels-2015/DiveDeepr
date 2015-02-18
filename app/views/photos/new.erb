@@ -1,7 +1,7 @@
 <div class="new_photo_form">
-  <form action="/dive_logs/<%= current_dive_log.id %>/show/photos" method="POST">
+  <form action="/dive_logs/<%= current_dive_log.id %>/show/photos.json" method="POST">
     <p>Photo URL</p>
     <input type="text" name="url">
-    <p><input type="submit">Add Photo</p>
+    <p><input type="submit" value="Add Photo"></p>
   </form>
 </div>
