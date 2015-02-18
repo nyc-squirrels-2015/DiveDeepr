@@ -13,4 +13,6 @@
   <p>Total Bottom Time: <%= @dive_log.bottom_time %> min</p>
   <p>Comment:</p>
     <p><%= @dive_log.comment %></p>
+  <p><a href="/dive_logs/<%= @dive_log.id %>/show/photos/all">Show all photos</a></p>
+  <p><a href="/dive_logs/<%= @dive_log.id %>/show/photos/new">Add photo to your log</a></p>
 </div>
