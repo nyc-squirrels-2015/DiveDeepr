@@ -25,3 +25,23 @@ post "/dive_logs/new" do
 
 end
 
+get "/dive_logs/:id/edit" do |id|
+  @dive_log = DiveLog.find(id)
+  erb :'logs/edit'
+end
+
+put "/dive_logs/:id/edit" do |id|
+  @dive_log = DiveLog.find(id)
+  @dive_log.update_attributes(params[:log])
+  p "*"*30
+  puts "Log updated"
+  redirect "/dive_logs/all"
+end
+
+delete "/dive_logs/:id" do |id|
+  DiveLog.delete(id)
+
+  redirect '/dive_logs/all'
+
+end
+

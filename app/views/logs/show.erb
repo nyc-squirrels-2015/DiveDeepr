@@ -1,3 +1,4 @@
+<div id="success"></div>
 <div class="show_log">
   <p>Date: <%= @dive_log.date %></p>
   <p>Visibility: <%= @dive_log.visibility %></p>
@@ -13,8 +14,15 @@
   <p>Total Bottom Time: <%= @dive_log.bottom_time %> min</p>
   <p>Comment:</p>
     <p><%= @dive_log.comment %></p>
+  <p><a href="/dive_logs/<%= @dive_log.id %>/edit" class="update_btn">Update Log</a></p>
   <p><a href="/dive_logs/<%= @dive_log.id %>/show/photos/all.json" class="show_btn">Show all photos</a></p>
   <div id="show_photos"></div>
   <p><a href="/dive_logs/<%= @dive_log.id %>/show/photos/new.json" class="add_btn">Add photo to your log</a></p>
   <div id="add_photos"></div>
+  <form action="/dive_logs/<%= @dive_log.id %>" method="post">
+  <div>
+    <input name="_method" type="hidden" value="delete"/>
+    <input type="submit" value="Delete Log">
+  </div>
+  </form>
 </div>

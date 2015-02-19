@@ -21,3 +21,4 @@ post "/dive_logs/:id/show/photos.json" do |id|
   end
 
 end
+

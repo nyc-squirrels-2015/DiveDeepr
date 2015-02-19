@@ -1,0 +1,31 @@
+<div class="edit_log_form">
+  <form action="/dive_logs/<%= @dive_log.id %>/edit" method="POST">
+    <input name="_method" type="hidden" value="put"/>
+    <p>Date of dive</p>
+      <input type="text" name="log[date]" value="<%= @dive_log.date %>">
+    <p>Visibility</p>
+      <input type="text" name="log[visibility]" value="<%= @dive_log.visibility %>">
+    <p>Location of dive</p>
+      <input type="text" name="log[location]" value="<%= @dive_log.location %>">
+    <p>Temperature</p>
+      <input type="text" name="log[temperature]" value="<%= @dive_log.temperature %>">
+    <p>Exposure Protection</p>
+      <input type="text" name="log[exposure_protection]" value="<%= @dive_log.exposure_protection %>">
+    <p>Condition</p>
+      <div class="opts"><input type="radio" name="log[condition]" value="Fresh Water"> Fresh Water</div>
+      <div class="opts"><input type="radio" name="log[condition]" value="Salt Water"> Salt Water</div>
+      <div class="opts"><input type="radio" name="log[condition]" value="Shore"> Shore</div>
+      <div class="opts"><input type="radio" name="log[condition]" value="Boat"> Boat</div>
+      <div class="opts"><input type="radio" name="log[condition]" value="Current / Drift"> Current / Drift</div>
+    <p>Starting PSI</p>
+      <input type="text" name="log[start_psi]" value="<%= @dive_log.start_psi %>">
+    <p>Ending PSI</p>
+      <input type="text" name="log[end_psi]" value="<%= @dive_log.end_psi %>">
+    <p>Depth (ft)</p>
+      <input type="text" name="log[depth]" value="<%= @dive_log.depth %>">
+    <p>Comments</p>
+      <textarea name="log[comment]"></textarea>
+    <input type="hidden" name="log[user_id]" value="<%= current_user.id %>">
+    <p><input type="submit" value="Update Log"></p>
+  </form>
+</div>
