@@ -5,3 +5,8 @@
 #add_photos {
     display: none;
 }
+
+#success {
+    display: none;,
+    color: green;
+}

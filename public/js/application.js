@@ -55,6 +55,7 @@ $(document).ready(function() {
       // dataType: "json",
       success: function(response){
         console.log("success ", response);
+        successMod.show("You have successfully added a photo!");
       },
       error: function(response){
         console.log("error ", response);
